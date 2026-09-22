@@ -15,3 +15,7 @@ else
     echo "add value is not greather than 20"
 fi
 
+echo "how many variables are provided: $#"  
+echo "hostname: $HOSTNAME"
+echo "processid : $$"
+echo "PWD: $PWD"
