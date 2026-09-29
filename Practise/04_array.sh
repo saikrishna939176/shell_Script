@@ -2,4 +2,4 @@
 
 Movies=("DJ" "Tillu2" "chandu")
 
-echo "First movie is : ${Movies[$@]}"
+echo "First movie is : ${Movies[@]}"
