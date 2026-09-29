@@ -10,5 +10,5 @@ else
 
 for packages in mariadb105 git docker
 do
-    echo $@
+    echo "$packages"
 done
