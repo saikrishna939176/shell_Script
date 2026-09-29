@@ -45,11 +45,16 @@ do
          VALIDATE $? "Installing mysql"
     fi  
 
-    echo "Need to uninstall the software type 1 to uninstall / type 0 exit"
-    read uninstall
-    if [ $uninstall -ne 0 ] 
+    # echo "Need to uninstall the software type 1 to uninstall / type 0 exit"
+    # read uninstall
+    echo "which software need to uninstall please provide the package name" 
+    read packagename
+    if [ $packagename -ne "mariadb105" ] 
     then
-        dnf remove mariadb105 -y &>>LOGFILE
+        dnf remove $packagename -y &>>LOGFILE
         VALIDATE $? "Uninstall mysql"
+    else    
+        echo "I don't want to uninstall it"
     fi
+
 done
