@@ -15,4 +15,15 @@ dnf install mariadb105 -N
 if [ $? -ne 0 ]
 then
     echo "Installation of mysql..Failure"
+else
+    echo "Installation of mysql..SUCCESS"
+fi
+
+dnf1 remove mariadb105 -y
+if [ $? -ne 0 ]
+then    
+    echo "Removing the mysql.. Failure"
+
+else
+    echo "Removing the mysql.. SUCCESS"
 fi
