@@ -10,4 +10,8 @@ then
 else    
     echo "You are super access"
 fi 
-echo "Exit"
+
+dnf install mariadb105
+if [ $? -ne 0 ]
+then
+    echo "Installation of mysql..Failure"
