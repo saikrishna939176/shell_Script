@@ -10,7 +10,7 @@ then
 
 else
     echo "you are super access"
-
+fi
 VALIDATE $? "Installing Mysql"
 
 VALIDATE() {
