@@ -1,7 +1,10 @@
 #!/bin/bash
 
 
-
+VALIDATE() {
+    echo "EXIT STATUS: $1"
+    echo "What are you doing:: $2"
+}
 USERID=$(id -u)
 if [ $USERID -ne 0 ]
 then
@@ -13,7 +16,3 @@ else
 fi
 VALIDATE $? "Installing Mysql"
 
-VALIDATE() {
-    echo "EXIT STATUS: $1"
-    echo "What are you doing:: $2"
-}
