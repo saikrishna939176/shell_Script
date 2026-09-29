@@ -7,6 +7,7 @@ then
 
 else
     echo "You are super access"
+fi 
 
 for packages in mariadb105,git,docker
 do
