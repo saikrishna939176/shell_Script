@@ -8,7 +8,7 @@ then
 else
     echo "You are super access"
 
-for packages in mariadb105 git docker
+for packages in mariadb105,git,docker
 do
     echo "$packages"
 done
