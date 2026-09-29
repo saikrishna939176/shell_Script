@@ -1,3 +1,6 @@
 #!/bin/bash
 
-echo "Welcome to learn devops deva"
+
+
+echo "Welcome to learn devops $1"
+
