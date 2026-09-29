@@ -44,4 +44,12 @@ do
          dnf remove $packages -y &>>LOGFILE
          VALIDATE $? "Installing mysql"
     fi  
+
+    echo "Need to uninstall the software type 1 to uninstall / type 0 exit"
+    read uninstall
+    if [ $uninstall -ne 0 ] 
+    then
+        dnf remove mariadb105 -y &>>LOGFILE
+        VALIDATE $? "Uninstall mysql"
+    fi
 done
