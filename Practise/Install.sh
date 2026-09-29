@@ -11,7 +11,7 @@ else
     echo "You are super access"
 fi 
 
-dnf install mariadb105
+dnf install mariadb105@ -y
 if [ $? -ne 0 ]
 then
     echo "Installation of mysql..Failure"
