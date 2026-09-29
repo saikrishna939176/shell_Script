@@ -41,7 +41,7 @@ do
     else
          echo -e "$packages is $R not installed..$N Installing Packages"
          sleep 3
-         dnf install $packages -y $>>LOGFILE
+         dnf install $packages -y &>>LOGFILE
          VALIDATE $? "Installing mysql"
     fi  
 done
