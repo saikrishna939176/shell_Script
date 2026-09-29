@@ -22,7 +22,7 @@ fi
 for packages in $@
 do
     echo "packages to install: $packages"
-    dnf list installed $packages &>>LOGFILE
+    dnf list installed $packages &>>$LOGFILE
 
     if [ $? -ne 0 ]
     then    
