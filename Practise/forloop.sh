@@ -24,8 +24,8 @@ do
 
     if [ $? -ne 0 ]
     then    
-        echo "$packages is $R not installed..$N Need to install"
+        echo -e "$packages is $R not installed..$N Need to install"
     else
-        echo "$packages $Y is already installed..SKIPPING $N"
+        echo -e "$packages $Y is already installed..SKIPPING $N"
     fi
 done
