@@ -49,7 +49,7 @@ do
     # read uninstall
     echo "which software need to uninstall please provide the package name" 
     read packagename
-    if [ $packagename == $packages ] 
+    if [ $packagename == "mariadb105" ] 
     then
         dnf remove $packagename -y &>>$LOGFILE
         VALIDATE $? "Uninstall mysql"
