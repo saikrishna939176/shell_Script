@@ -34,5 +34,5 @@ fi
 dnf install mariadb105 -y &>>$LOGFILE
 VALIDATE $? "Installing mysql" 
 
-dnf remove mariadb105@ -y &>>$LOGFILE
+dnf remove1 mariadb105@ -y &>>$LOGFILE
 VALIDATE $? "Removing mysql" 
