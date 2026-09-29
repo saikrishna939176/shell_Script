@@ -31,6 +31,8 @@ else
     echo "You are super access"
 fi
 
-dnf remove mariadb105 -y &>>$LOGFILE
+dnf install mariadb105 -y &>>$LOGFILE
 VALIDATE $? "Installing mysql" 
 
+dnf remove mariadb105@ -y &>>$LOGFILE
+VALIDATE $? "Removing mysql" 
