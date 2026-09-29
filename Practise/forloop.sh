@@ -17,15 +17,15 @@ N="\e[0m"
 VALIDATE() {
     if [ $1 -ne 0 ]
     then
-        echo "$2 .. $R FAILURE $N"
+        echo -e "$2 .. $R FAILURE $N"
     else
-        echo "$2 .. $G Installed $N"
+        echo -e "$2 .. $G Installed $N"
     fi
 }
 if [ $USERID -ne 0 ]
 then
     echo "Need to run the script with super access"
-
+    exit 1
 else
     echo "You are super access"
 fi 
