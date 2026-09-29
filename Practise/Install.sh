@@ -11,10 +11,11 @@ else
     echo "You are super access"
 fi 
 
-dnf install mariadb105 -N
+dnf install mariadb105 -y
 if [ $? -ne 0 ]
 then
     echo "Installation of mysql..Failure"
+    exit 1
 else
     echo "Installation of mysql..SUCCESS"
 fi
@@ -23,7 +24,7 @@ dnf1 remove mariadb105 -y
 if [ $? -ne 0 ]
 then    
     echo "Removing the mysql.. Failure"
-
+    exit 1
 else
     echo "Removing the mysql.. SUCCESS"
 fi
