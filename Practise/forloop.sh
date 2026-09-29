@@ -35,7 +35,7 @@ do
     echo "packages to install: $packages"
     dnf list installed $packages &>>$LOGFILE
 
-    if [ $? -ne 0 ]
+    if [ $? -eq 0 ]
     then    
         echo -e "$packages $Y is already installed..SKIPPING $N"
     else
