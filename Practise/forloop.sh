@@ -41,7 +41,7 @@ do
     else
          echo -e "$packages is $R not installed..$N Installing Packages"
          sleep 3
-         dnf install $packages -y &>>LOGFILE
+         dnf install $packages -y &>>$LOGFILE
          VALIDATE $? "Installing mysql"
     fi  
 
@@ -51,7 +51,7 @@ do
     read packagename
     if [ $packagename == "mariadb105" ] 
     then
-        dnf remove $packagename -y &>>LOGFILE
+        dnf remove $packagename -y &>>$LOGFILE
         VALIDATE $? "Uninstall mysql"
     else    
         echo "I don't want to uninstall it"
