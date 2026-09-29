@@ -20,7 +20,7 @@ else
     echo "Installation of mysql..SUCCESS"
 fi
 
-dnf1 remove mariadb105 -y
+dnf remove mariadb105 -y
 if [ $? -ne 0 ]
 then    
     echo "Removing the mysql.. Failure"
