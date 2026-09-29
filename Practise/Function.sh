@@ -14,5 +14,6 @@ then
 else
     echo "you are super access"
 fi
+Install mysq
 VALIDATE $? "Installing Mysql"
 
