@@ -24,6 +24,11 @@ FILES=$(find $SOURCE_DIRECTORY -name "*.log" -mtime +14)
 while IFS= read -r file
 do
     echo "Deleting file: $file"
+    if [ -f $file ]
+    then
+        echo "File not exist"
+    else
+        echo "Files are deleted successfully"
     rm -rf $file
 done <<< $FILES
 
