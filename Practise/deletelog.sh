@@ -29,6 +29,7 @@ do
         echo "File not exist"
     else
         echo "Files are deleted successfully"
+    fi
     rm -rf $file
 done <<< $FILES
 
