@@ -25,7 +25,7 @@ echo "Files to delete: $FILES"
 
 while IFS= read -r file
 do
-    if [ -f $file ]
+    if [ -f "$file" ]
     then
         echo "Files are deleted successfully"
         echo "Deleting file: $file"
