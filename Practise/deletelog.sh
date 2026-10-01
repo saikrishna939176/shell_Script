@@ -18,19 +18,27 @@ else
     echo "Created the $SOURCE_DIRECTORY $G Successfully $N"
 
 fi
+cd /tmp/app-logs
+for i in {1..3}
+do
+    touch -d 20260630 $i.txt
+done
 
-FILES=$(find $SOURCE_DIRECTORY -name "*" -mtime +4)
+FILES=$(find $SOURCE_DIRECTORY -name "*" -mtime +14)
 echo "Files to delete: $FILES"
+
+
 while IFS= read -r file
 do
     if [ -f $file ]
     then
         echo "Files are deleted successfully"
         echo "Deleting file: $file"
+        rm -rf $file
     else
         echo "Files are not exist"
     fi
-    rm -rf $file
+    
 done <<< $FILES
 
     
