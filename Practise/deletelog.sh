@@ -17,12 +17,7 @@ else
     mkdir /app-logs
     echo "Created the $SOURCE_DIRECTORY $G Successfully $N"
 
-# fi
-# cd /tmp/app-logs
-# for i in {1..3}
-# do
-#     touch -d 20260630 $i.txt
-# done
+fi
 
 FILES=$(find $SOURCE_DIRECTORY -name "*" -mtime +14)
 echo "Files to delete: $FILES"
