@@ -14,8 +14,8 @@ then
 else    
     echo -e "$R Please make sure $SOURCE_DIRECTORY exists $N"
     sleep 3
-    mkdir /app-logs
-    echo "Created the $SOURCE_DIRECTORY $G Successfully $N"
+    mkdir /tmp/app-logs
+    echo -e "$G Created the $SOURCE_DIRECTORY Successfully $N"
 
 fi
 cd /tmp/app-logs
