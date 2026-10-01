@@ -20,13 +20,13 @@ else
 fi
 
 FILES=$(find $SOURCE_DIRECTORY -name "*" -mtime +14)
-echo "Files to delete: $FILES"
 
 
 while IFS= read -r file
 do
     if [ -f "$file" ]
     then
+        echo "Files to delete: $FILES"
         echo "Files are deleted successfully"
         echo "Deleting file: $file"
         rm -rf $file
