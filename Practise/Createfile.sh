@@ -19,7 +19,7 @@ else
 
 fi
 cd /tmp/app-logs
-for i in file{1..3}
+for i in file{1..3} java{1..3}
 do
     touch -d 20260630 $i.txt
 done
