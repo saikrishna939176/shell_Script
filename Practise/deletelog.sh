@@ -25,10 +25,10 @@ while IFS= read -r file
 do
     if [ -f $file ]
     then
-        echo "Files are not exist"
-    else
         echo "Files are deleted successfully"
         echo "Deleting file: $file"
+    else
+        echo "Files are not exist"
     fi
     rm -rf $file
 done <<< $FILES
