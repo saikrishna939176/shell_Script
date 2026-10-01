@@ -19,7 +19,7 @@ else
 
 fi
 
-FILES=$(find $SOURCE_DIRECTORY -name "*.txt" -mtime +4)
+FILES=$(find $SOURCE_DIRECTORY -name "*" -mtime +4)
 # echo "Files to delete: $FILES"
 while IFS= read -r file
 do
