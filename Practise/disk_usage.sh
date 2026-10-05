@@ -11,13 +11,13 @@ do
 
     if [ $USAGE -ge $DISK_THRESHOLD ]
     then
-        Message+=echo "$FOLDER is more than $DISK_THRESHOLD, current usage: $USAGE"
+        Message=echo "$FOLDER is more than $DISK_THRESHOLD, current usage: $USAGE"
     else
-        Message+=echo "$FOLDER is less than $DISK_THRESHOLD, current usage: $USAGE"
+        Message=echo "$FOLDER is less than $DISK_THRESHOLD, current usage: $USAGE"
     fi
 
 done <<< $DISK_USAGE
 
-echo -e "Message:: $Message"
+echo "Message:: $Message"
 
 #echo "$Message" | mail -s "Disk usage alert" devasai6711@gmail.com
