@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DISK_USAGE=$(df -hT | grep efivarfs)
+DISK_USAGE=$(df -hT | grep vfat)
 DISK_THRESHOLD=10
 
 while IFS= read -r line
