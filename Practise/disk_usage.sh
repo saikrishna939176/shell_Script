@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DISK_USAGE=$(df -hT | grep vfat)
+DISK_USAGE=$(df -hT | grep xfs)
 DISK_THRESHOLD=10
 Message=""
 
@@ -18,6 +18,6 @@ do
 
 done <<< $DISK_USAGE
 
-echo "Message:: $Message"
+echo -e "Message:: $Message"
 
-echo "$Message" | mail -s "Disk usage alert" devasai6711@gmail.com
+#echo "$Message" | mail -s "Disk usage alert" devasai6711@gmail.com
